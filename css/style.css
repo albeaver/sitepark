@@ -1,0 +1,14 @@
+body {
+	margin: 0;
+	overflow: hidden;
+}
+
+canvas {
+	background-image: radial-gradient(#666, #333);
+}
+
+#three-container{
+	width:100%;
+	height: 100%;
+	position: fixed;
+}
