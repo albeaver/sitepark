@@ -17,8 +17,8 @@ function init() {
 
   var slide = new Slide(width, height, 'out');
 	var l1 = new THREE.ImageLoader();
-	//l1.setCrossOrigin('Anonymous');
-	l1.load('https://abvr.oss-us-west-1.aliyuncs.com/serve/img/parking/merussia.jpg?x-oss-process=style/adaptive', function(img) {
+	l1.setCrossOrigin('Anonymous');
+	l1.load('https://abvr.oss-us-west-1.aliyuncs.com/serve/img/parking/WebsiteParkImages%20%281%29.jpg', function(img) {
 	  slide.setImage(img);
 	})
   root.scene.add(slide);
