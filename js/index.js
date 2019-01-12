@@ -12,13 +12,13 @@ function init() {
   root.renderer.setPixelRatio(window.devicePixelRatio || 1);
   root.camera.position.set(0, 0, 60);
 
-  var width = 100;
-  var height = 60;
+  var width = window.innerWidth/100;
+  var height = window.innerHeight/100;
 
   var slide = new Slide(width, height, 'out');
 	var l1 = new THREE.ImageLoader();
-	l1.setCrossOrigin('Anonymous');
-	l1.load('http://abvr.oss-us-west-1.aliyuncs.com/serve/img/parking/merussia.jpg', function(img) {
+	//l1.setCrossOrigin('Anonymous');
+	l1.load('https://abvr.oss-us-west-1.aliyuncs.com/serve/img/parking/merussia.jpg', function(img) {
 	  slide.setImage(img);
 	})
   root.scene.add(slide);
