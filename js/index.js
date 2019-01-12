@@ -26,7 +26,7 @@ function init() {
   var slide2 = new Slide(width, height, 'in');
   var l2 = new THREE.ImageLoader();
 	l2.setCrossOrigin('Anonymous');
-	l2.load('http://abvr.oss-us-west-1.aliyuncs.com/serve/img/parking/WebsiteParkImages%20%281%29.jpg', function(img) {
+	l2.load('https://abvr.oss-us-west-1.aliyuncs.com/serve/img/parking/WebsiteParkImages%20%281%29.jpg', function(img) {
 		slide2.setImage(img);
 	})
 	
@@ -35,7 +35,7 @@ function init() {
   var slide3 = new Slide(width, height, 'in');
   var l3 = new THREE.ImageLoader();
 	l3.setCrossOrigin('Anonymous');
-	l3.load('http://abvr.oss-us-west-1.aliyuncs.com/serve/img/parking/WebsiteParkImages.jpg', function(img) {
+	l3.load('https://abvr.oss-us-west-1.aliyuncs.com/serve/img/parking/WebsiteParkImages.jpg', function(img) {
 		slide3.setImage(img);
 	})
 	
