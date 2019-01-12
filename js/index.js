@@ -31,7 +31,7 @@ function init() {
 	})
 	
   root.scene.add(slide2);
-
+/*
   var slide3 = new Slide(width, height, 'in');
   var l3 = new THREE.ImageLoader();
 	l3.setCrossOrigin('Anonymous');
@@ -40,12 +40,12 @@ function init() {
 	})
 	
   root.scene.add(slide3);
-
+*/
   var tl = new TimelineMax({repeat:-1, repeatDelay:1.0, yoyo: true});
 
   tl.add(slide.transition(), 0);
   tl.add(slide2.transition(), 0);
-  tl.add(slide3.transition(), 0);
+  //tl.add(slide3.transition(), 0);
 
   createTweenScrubber(tl);
 
