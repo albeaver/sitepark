@@ -12,13 +12,13 @@ function init() {
   root.renderer.setPixelRatio(window.devicePixelRatio || 1);
   root.camera.position.set(0, 0, 60);
 
-  var width = window.innerWidth/100;
-  var height = window.innerHeight/100;
+  var width = 100;
+  var height = window.innerHeight*(100/window.innerWidth);
 
   var slide = new Slide(width, height, 'out');
 	var l1 = new THREE.ImageLoader();
 	//l1.setCrossOrigin('Anonymous');
-	l1.load('https://abvr.oss-us-west-1.aliyuncs.com/serve/img/parking/merussia.jpg', function(img) {
+	l1.load('https://abvr.oss-us-west-1.aliyuncs.com/serve/img/parking/merussia.jpg?x-oss-process=style/adaptive', function(img) {
 	  slide.setImage(img);
 	})
   root.scene.add(slide);
@@ -26,16 +26,26 @@ function init() {
   var slide2 = new Slide(width, height, 'in');
   var l2 = new THREE.ImageLoader();
 	l2.setCrossOrigin('Anonymous');
-	l2.load('https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/spring.jpg', function(img) {
+	l2.load('http://abvr.oss-us-west-1.aliyuncs.com/serve/img/parking/WebsiteParkImages%20%281%29.jpg', function(img) {
 		slide2.setImage(img);
 	})
 	
   root.scene.add(slide2);
 
-  var tl = new TimelineMax({repeat:-1, repeatDelay:1.0, yoyo: false});
+  var slide3 = new Slide(width, height, 'in');
+  var l3 = new THREE.ImageLoader();
+	l3.setCrossOrigin('Anonymous');
+	l3.load('http://abvr.oss-us-west-1.aliyuncs.com/serve/img/parking/WebsiteParkImages.jpg', function(img) {
+		slide3.setImage(img);
+	})
+	
+  root.scene.add(slide3);
+
+  var tl = new TimelineMax({repeat:-1, repeatDelay:1.0, yoyo: true});
 
   tl.add(slide.transition(), 0);
   tl.add(slide2.transition(), 0);
+  tl.add(slide3.transition(), 0);
 
   createTweenScrubber(tl);
 
